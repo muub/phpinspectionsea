@@ -14,7 +14,7 @@
         $lineContent = trim($lineContent);
         if (false !== stripos($lineContent, 'inspect') && false !== strpos($lineContent, '|')) {
             $fragments = explode('|', $lineContent);
-            if (count($fragments) >= 7) {
+            if (count($fragments) >= 8) {
                 $groupName        = trim($fragments[1]);
                 $shortName        = trim($fragments[2]);
                 $displayName      = trim($fragments[3]);
