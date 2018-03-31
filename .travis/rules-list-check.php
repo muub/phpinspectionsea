@@ -60,7 +60,7 @@
         if (false === $description) {
             throw new \RuntimeException('Could not read description file: ' . $descriptionFile);
         }
-        $valueObject->hasDocumentation = false !== strpos('/kalessil/phpinspectionsea/blob/master/docs/', $description);
+        $valueObject->hasDocumentation = false !== strpos($description, '/kalessil/phpinspectionsea/blob/master/docs/');
     }
 
     /* step 1: report un-documented inspections */
