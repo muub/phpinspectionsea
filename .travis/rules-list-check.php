@@ -56,8 +56,7 @@
         }
 
         $descriptionFile = sprintf('%s/src/main/resources/inspectionDescriptions/%s.html', $basePath, $shortName);
-        $description     = file_get_contents($descriptionFile);
-        if (false === $description) {
+        if (false === $description = file_get_contents($descriptionFile)) {
             throw new \RuntimeException('Could not read description file: ' . $descriptionFile);
         }
         $valueObject->hasDocumentation = false !== strpos($description, '/kalessil/phpinspectionsea/blob/master/docs/');
